@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Notes Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="home" class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Neon Notes Blog</h1>
+      <p class="site-tagline">Clean layout. Loud ideas. Zero chaos.</p>
+    </div>
+
+    <!-- Navigation with 3 internal links -->
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <section id="blog" class="panel fade-in">
+      <h2>Latest Posts</h2>
+
+      <!-- Flex layout container -->
+      <div class="content-grid">
+        <!-- Article 1 -->
+        <article class="card">
+          <h3>Post One: The Layout That Behaves</h3>
+          <p>
+            Responsive design is basically your site learning to breathe on any screen size. Flexbox helps
+            structure the chaos so your content stays readable and centered.
+          </p>
+          <p>
+            The goal isn’t “everything everywhere all at once.” It’s clarity: spacing, alignment, and a layout
+            that adapts without breaking.
+          </p>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="card">
+          <h3>Post Two: Small Animations, Big Vibes</h3>
+          <p>
+            Subtle motion makes the UI feel alive, like it’s reacting to the user instead of just sitting there.
+            Fade-ins and hover states are simple but powerful.
+          </p>
+          <p>
+            Keep it smooth, keep it readable, and use transitions so interactions feel intentional, not jumpy.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact section (includes contact info + form) -->
+    <section id="contact" class="panel fade-in">
+      <h2>Contact</h2>
+
+      <div class="content-grid">
+        <!-- Contact Info -->
+        <div class="card">
+          <h3>Contact Info</h3>
+          <p><strong>Email:</strong> example@email.com</p>
+          <p><strong>Office Hours:</strong> Mon–Thu, 2pm–4pm</p>
+          <p>
+            Drop a message using the form. Required fields will stop the form from submitting until filled out.
+          </p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+          <h3>Send a Message</h3>
+
+          <!-- "Working" form: uses built-in HTML validation and submits to a placeholder endpoint.
+               If your instructor wants a real endpoint, swap action to a service like Formspree. -->
+          <form class="contact-form" action="https://httpbin.org/post" method="POST">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" required placeholder="Your name" />
+
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required placeholder="you@domain.com" />
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Optional subject" />
+
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="6" required placeholder="Type your message..."></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+
+          <p class="form-note">
+            <span aria-hidden="true">*</span> Required fields (Subject is optional).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with studentID + copyright symbol -->
+  <footer class="site-footer">
+    <p>StudentID: <strong>YOUR_STUDENT_ID_HERE</strong> &copy; 2026</p>
+  </footer>
+</body>
+</html>
 
